@@ -66,29 +66,33 @@ This project is designed to detect scratches on images containing text using a C
 
 ---
 
-## **Project Structure**
+### **/models/**:
+- **`utils.py`**: Contains helper functions, such as saving and loading models.
+- **`scratch_detection_model.py`**: Defines the architecture of the CNN used for scratch detection.
 
-The directory structure for this project is organized as follows:
-/scratch_detection_project ├── /models # Contains model architecture and utility functions │ ├── utils.py │ └── scratch_detection_model.py ├── /scripts # Contains all scripts for training, evaluation, inference, and visualization │ ├── data_preprocessing.py │ ├── train_model.py │ ├── evaluate_model.py │ ├── detect_scratch.py │ └── visualize_results.py ├── /data # Contains the dataset for training and testing │ ├── /train # Training images (good and bad) │ └── /test # Test images (good and bad) └── requirements.txt # Python dependencies
+### **/scripts/**:
+- **`data_preprocessing.py`**: Loads, preprocesses, and augments the images for training and testing.
+- **`train_model.py`**: Trains the CNN model using the `train` dataset.
+- **`evaluate_model.py`**: Evaluates the trained model on the `test` dataset and prints the accuracy and loss.
+- **`detect_scratch.py`**: Runs inference on new images to detect scratches.
+- **`visualize_results.py`**: Visualizes predictions made by the model on images.
 
+### **/data/**:
+- **`/train/`**: Contains subdirectories `good_images` and `bad_images` for training images.
+- **`/test/`**: Contains subdirectories `good_images` and `bad_images` for testing images.
 
-- **`models/`**: Contains the architecture of the model (`scratch_detection_model.py`) and utility functions (`utils.py`).
-- **`scripts/`**: Contains scripts for data preprocessing, training the model, evaluating the model, detecting scratches on new images, and visualizing results.
-- **`data/`**: Contains the dataset used for training and testing (good and bad images).
-- **`requirements.txt`**: Lists all the required Python packages.
+### **requirements.txt**:
+- Lists all Python dependencies required to run the project.
 
 ---
 
-## **Dependencies**
+## Setup Instructions
 
-The project requires the following Python libraries:
+### 1. Clone the Repository
 
-- **TensorFlow**: For building and training the model.
-- **NumPy**: For numerical operations and handling arrays.
-- **OpenCV**: For image loading and processing.
-- **Matplotlib**: For visualizing images and results.
-
-To install the required dependencies, use the following command:
+Clone this repository to your local machine:
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/your-repository-url/scratch_detection_project.git
+cd scratch_detection_project
+
