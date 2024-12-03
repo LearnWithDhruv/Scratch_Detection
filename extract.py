@@ -3,7 +3,6 @@ import shutil
 import random
 import zipfile
 
-# Define paths for the original folders and the new project directory
 source_dir = r'D:\Scratch_Detection\scratch_detection_project\anomaly_detection_test_data'  
 data_dir = r'D:\Scratch_Detection\scratch_detection_project\scratch_detection_project\data' 
 
