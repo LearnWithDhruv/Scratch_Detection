@@ -4,8 +4,8 @@ import random
 import zipfile
 
 # Define paths for the original folders and the new project directory
-source_dir = r'D:\Scratch_Detection\scratch_detection_project\anomaly_detection_test_data'  # Replace with your unzipped folder containing good, bad, and masks
-data_dir = r'D:\Scratch_Detection\scratch_detection_project\scratch_detection_project\data'  # Replace with the data directory of your project
+source_dir = r'D:\Scratch_Detection\scratch_detection_project\anomaly_detection_test_data'  
+data_dir = r'D:\Scratch_Detection\scratch_detection_project\scratch_detection_project\data' 
 
 # Define paths for train, test, and augmented directories
 train_dir = os.path.join(data_dir, 'train')
